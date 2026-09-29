@@ -125,7 +125,7 @@ li { margin-bottom: 0.45rem; }
   box-shadow: 0 2px 12px rgba(17, 24, 23, 0.1);
 }
 .nav-inner { display: flex; align-items: center; gap: 20px; min-height: 64px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 400; font-size: 1.75rem; font-family: "Vampiro One", var(--font-display); color: var(--ink); text-decoration: none; }
 .brand-mark { width: 30px; height: 30px; color: var(--accent); flex: 0 0 auto; }
 .nav-links { display: flex; gap: 20px; margin-left: auto; }
 .nav-links a { color: #2b3531; text-decoration: none; font-size: 0.94rem; font-weight: 500; }
