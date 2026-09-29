@@ -111,8 +111,9 @@ li { margin-bottom: 0.45rem; }
 /* --- announcement + nav --- */
 .announce {
   background: var(--dark-announce, #111817); color: #eef3ef;
-  font-size: 0.9rem; text-align: center; padding: 8px 20px;
+  font-size: 0.9rem; text-align: center; padding: 6px 20px;
 }
+.announce p { margin: 0; }
 .announce strong { color: #fff; }
 .announce a { color: #cfe6da; }
 
