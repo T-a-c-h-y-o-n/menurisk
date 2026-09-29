@@ -1,1 +1,12 @@
-
+# Menu Risk — ingredient list template
+# One ingredient per line. Lines starting with # are ignored, and a header row is optional.
+# Write specific names: "cheese" alone is too generic to match reliably -> "sharp cheddar cheese".
+# Format: UTF-8, up to 1 MB, up to 5,000 lines. Blank lines and duplicates are ignored.
+menu_item
+Sharp Cheddar Cheese Slices
+Romaine Hearts
+Boar's Head Deli Turkey
+Hummus
+Rocket
+Sourdough Bread
+Gouda Cheese Wedge
