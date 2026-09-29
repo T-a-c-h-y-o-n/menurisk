@@ -275,6 +275,7 @@
     var fileInput = document.getElementById("csv");
     var emailInput = document.getElementById("email");
     var errorBox = document.getElementById("form-error");
+    var okBox = document.getElementById("form-ok");
     var submit = document.getElementById("scan-submit");
     var counter = document.getElementById("items-count");
     var result = document.getElementById("result");
@@ -287,6 +288,15 @@
     function clearError() {
       errorBox.hidden = true;
       errorBox.textContent = "";
+      if (okBox) { okBox.hidden = true; okBox.textContent = ""; }
+    }
+    function showQueued(via, source) {
+      clearError();
+      if (okBox) {
+        okBox.textContent = "Your request was sent — we'll email you the result shortly.";
+        okBox.hidden = false;
+      }
+      track("scan_queued", { source: source, via: via });
     }
 
     textarea.addEventListener("input", function () {
@@ -351,14 +361,12 @@
           .catch(function (error) {
             var hint = CONTACT ? " You can also email " + CONTACT + " and we'll run it manually." : "";
             postFormspreeFallback(submitPayload).then(function () {
-              showError("The live scan server isn't reachable, but your request was sent — we'll email you the result shortly." + hint);
-              track("scan_queued", { source: submitPayload.source || "landing", via: "fetch" });
+              showQueued("fetch", submitPayload.source || "landing");
             }, function () {
               /* fetch de engellendiyse (adblock/CORS/file://): native POST her turlu gider */
               try {
                 nativeFormspreeSubmit(submitPayload);
-                showError("The live scan server isn't reachable, so your request was sent in a new tab — we'll email you the result shortly." + hint);
-                track("scan_queued", { source: submitPayload.source || "landing", via: "native" });
+                showQueued("native", submitPayload.source || "landing");
               } catch (e) {
                 showError(error.message + hint);
               }
