@@ -248,7 +248,7 @@ li { margin-bottom: 0.45rem; }
 .table-scroll { overflow-x: auto; }
 .benefits { width: 100%; border-collapse: collapse; min-width: 640px; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
 .benefits th, .benefits td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 0.94rem; }
-.benefits th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-mono); color: var(--muted); }
+.benefits th { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-mono); color: var(--ink); background: var(--surface-strong); }
 .benefits tbody tr:last-child td { border-bottom: 0; }
 
 /* --- form --- */
