@@ -28,5 +28,7 @@ Plus `robots.txt`, `sitemap.xml`, `CNAME`, `404.html` and the legal pages
   by email. Nothing is lost.
 - US recalls only. Results are potential matches for human review, not a
   determination and not legal or compliance advice.
+- The trust strip carries a "re-verified YYYY-MM-DD" date. Bump it in
+  `index.html` every time `scan.py ingest` confirms a fresh pull.
 
 Contact: info@ai2eo.com

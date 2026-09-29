@@ -12,7 +12,7 @@
   --surface-strong: #e8eee7;
   --ink: #111817;
   --ink-soft: #3f4d47;
-  --muted: #69766f;
+  --muted: #5b6862;
   --line: #d4ddd5;
   --line-strong: #aebbb1;
   --accent: #176b52;
@@ -21,8 +21,7 @@
 
   --risk-critical: #b42318;
   --risk-critical-soft: #f4dcd8;
-  --risk-high: #a66a13;
-  --risk-high-soft: #f2e5c9;
+  --risk-high: #7e4e0e;      --risk-high-soft: #f2e5c9;
   --risk-medium: #7a6410;
   --risk-medium-soft: #f4efd8;
   --risk-low: #4a5b53;

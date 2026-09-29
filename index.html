@@ -16,7 +16,9 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23176b52'/%3E%3Cpath d='M9 17.5 14 22l9-12' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="styles.css?v=20260930">
   <!-- GA4: property acilinca G-XXXXXXX yerine olcu kimligini yazip yorumu kaldir.
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
@@ -126,7 +128,7 @@
     <div class="wrap trust-grid">
       <div class="trust-item">
         <span class="trust-label">Source</span>
-        <span class="trust-value">FDA openFDA food enforcement (public domain US government data)</span>
+        <span class="trust-value">FDA openFDA food enforcement (public domain US government data) · re-verified 2026-09-30</span>
       </div>
       <div class="trust-item">
         <span class="trust-label">Coverage</span>
@@ -506,7 +508,7 @@
      name, credentials and bio link (LANDING_BLUEPRINT §15, gate G6). No placeholder
      expertise is shown to visitors. -->
 
-<script src="config.js?v=20260930"></script>
-<script src="script.js?v=20260930"></script>
+<script src="config.js?v=20260930" defer></script>
+<script src="script.js?v=20260930" defer></script>
 </body>
 </html>
