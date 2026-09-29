@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /result.html
+Disallow: /result
+
+Sitemap: https://menurisk.ai2eo.com/sitemap.xml

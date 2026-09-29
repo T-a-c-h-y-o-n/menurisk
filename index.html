@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#111817">
+  <title>Food Recall Monitoring for Restaurants — Menu Checks with Sources | Menu Risk</title>
+  <meta name="description" content="Upload your menu and check it against active US food recalls. See what's worth reviewing, why it matched, and the source. Free scan, no credit card.">
+  <link rel="canonical" href="https://menurisk.ai2eo.com/">
+  <meta property="og:title" content="Know when a food recall may affect something on your menu">
+  <meta property="og:description" content="Match your ingredient list against active US food recall data. Every match shows its reason and its source. Free scan, no credit card.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://menurisk.ai2eo.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23176b52'/%3E%3Cpath d='M9 17.5 14 22l9-12' fill='none' stroke='%23ffffff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260930">
+  <!-- GA4: property acilinca G-XXXXXXX yerine olcu kimligini yazip yorumu kaldir.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXX");
+  </script>
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Menu Risk",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Checks a restaurant's ingredient list against active US food recall data and reports potential matches with the reason, risk level and source.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free menu scan" },
+    "url": "https://menurisk.ai2eo.com/"
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="announce" id="top">
+  <p><strong>Free menu scan</strong> — no credit card. See what could affect your menu before you pay for anything. <a href="#scan">Scan my menu free →</a></p>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Menu Risk — home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="7" fill="currentColor"></rect>
+        <path d="M9 17.5 14 22l9-12" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span>Menu Risk</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#how-it-works">How it works</a>
+      <a href="#sample">Sample result</a>
+      <a href="#trust">Sources</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#scan">Scan my menu free</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Food recall monitoring for restaurants</p>
+        <h1>Know when a food recall may affect something on your menu.</h1>
+        <p class="lede">Upload your ingredient list. We match it against active US food recall data, show what's worth reviewing, and keep a dated, source-linked record of the check.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#scan">Scan my menu free</a>
+          <a class="btn btn-ghost" href="#sample">See a sample result</a>
+        </div>
+        <ul class="micro">
+          <li>No credit card. No sales call.</li>
+          <li>US recalls only — FDA openFDA food enforcement data.</li>
+          <li>Every match shows its reason and its source.</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="card result-card" aria-label="Example scan result (sample data)">
+          <figcaption class="card-head">
+            <span class="card-title">Scan result</span>
+            <span class="sample-tag">SAMPLE DATA</span>
+          </figcaption>
+          <div class="card-meta">
+            <span class="mono">12 items checked</span>
+            <span class="mono">170 active recalls</span>
+            <span class="mono">pulled 2026-09-29</span>
+          </div>
+          <div class="mini-match">
+            <span class="pill pill-critical">CRITICAL</span>
+            <p class="mini-title">sharp cheddar cheese</p>
+            <p class="mini-sub">matched a Class I recall: <span class="mono">"…Sharp Cheddar Cheese…"</span></p>
+          </div>
+          <div class="mini-match">
+            <span class="pill pill-high">HIGH</span>
+            <p class="mini-title">sourdough bread</p>
+            <p class="mini-sub">matched a Class II recall by product phrase</p>
+          </div>
+          <div class="mini-match">
+            <span class="pill pill-medium">MEDIUM</span>
+            <p class="mini-title">gouda cheese wedge</p>
+            <p class="mini-sub">category-level signal — review recommended</p>
+          </div>
+          <div class="mini-match mini-none">
+            <span class="pill pill-none">NO MATCH</span>
+            <p class="mini-title">cheese</p>
+            <p class="mini-sub">too generic to match reliably — rename it</p>
+          </div>
+          <p class="card-foot">Sample data shown for illustration. Your results are based on your own list.</p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip" id="trust">
+    <div class="wrap trust-grid">
+      <div class="trust-item">
+        <span class="trust-label">Source</span>
+        <span class="trust-value">FDA openFDA food enforcement (public domain US government data)</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-label">Coverage</span>
+        <span class="trust-value">US recalls only</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-label">Matching</span>
+        <span class="trust-value">Deterministic rules — every match carries a written reason</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-label">Verification</span>
+        <span class="trust-value">Human review recommended — always</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="problem">
+    <div class="wrap narrow">
+      <h2>Recall lists change. Your menu changes. Someone has to keep up.</h2>
+      <ul class="list-problem">
+        <li>Active recall lists are updated continuously. A check you did three weeks ago says nothing about today.</li>
+        <li>Your menu changes seasonally, and suppliers change under you.</li>
+        <li>Checking by hand means reading a national list against your own ingredient list, line by line, every day.</li>
+        <li>When an inspection asks how you monitor this, "we look sometimes" is not a record.</li>
+      </ul>
+      <p class="callout">That's the part we take off your plate: your list gets checked against the active recall data, and the check leaves a record you can point to.</p>
+    </div>
+  </section>
+
+  <section class="section alt" id="how-it-works">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li class="step card">
+          <span class="step-num mono">01</span>
+          <h3>Paste or upload your ingredient list</h3>
+          <p>CSV or plain text. UTF-8, up to 1 MB and 5,000 lines. One ingredient per line.</p>
+          <p class="trust-note">Nothing is published. It's used for your scan and, if you enable it, your monitoring.</p>
+        </li>
+        <li class="step card">
+          <span class="step-num mono">02</span>
+          <h3>We normalize the names</h3>
+          <p><span class="mono">Sharp Cheddar Cheese Slices</span> → <em>sharp cheddar cheese</em>; <span class="mono">rocket</span> → <em>arugula</em>. Generic one-word entries like "cheese" are flagged instead of guessed.</p>
+          <p class="trust-note">Deterministic rules — not a black box, and no language model decides your matches.</p>
+        </li>
+        <li class="step card">
+          <span class="step-num mono">03</span>
+          <h3>We compare against active US food recalls</h3>
+          <p>Current FDA openFDA food enforcement records. Each record keeps its source URL and the date it was pulled.</p>
+          <p class="trust-note">Source and timestamp travel with every match, so you can check it yourself.</p>
+        </li>
+        <li class="step card">
+          <span class="step-num mono">04</span>
+          <h3>You review what's worth reviewing</h3>
+          <p>Risk level first, then the reason it matched and the next step. High-priority items appear at the top.</p>
+          <p class="trust-note">Human verification recommended — always. A match tells you where to look.</p>
+        </li>
+      </ol>
+      <div class="section-cta">
+        <a class="btn btn-primary" href="#scan">Scan my menu free</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sample">
+    <div class="wrap">
+      <h2>What a scan result looks like</h2>
+      <p class="section-lede">Three examples: a high-priority match, a lower-priority one, and an entry that is too generic to match. Real output uses your own list.</p>
+
+      <div class="example-grid">
+        <article class="card alert-card risk-critical">
+          <header class="alert-head">
+            <span class="pill pill-critical">POTENTIAL MATCH · CRITICAL</span>
+            <span class="sample-tag">SAMPLE DATA</span>
+          </header>
+          <dl class="alert-body">
+            <dt>Ingredient</dt><dd>sharp cheddar cheese</dd>
+            <dt>Recall product</dt><dd>Spicy Pimento Cheese Dip (Class I, ongoing)</dd>
+            <dt>Recalling firm</dt><dd>Sample firm name</dd>
+            <dt>Why it matched</dt><dd>ingredient phrase 'sharp cheddar cheese' found in the recall product description</dd>
+            <dt>Lot / code info</dt><dd>Lot 00000, best by 00/00/0000</dd>
+            <dt>Source</dt><dd class="mono">https://api.fda.gov/food/enforcement.json?search=…</dd>
+            <dt>Pulled</dt><dd class="mono">2026-09-29T07:38:12Z</dd>
+          </dl>
+          <p class="next-step"><strong>Next step:</strong> Verify the lot/date code on the product you have, and confirm with your supplier before use.</p>
+        </article>
+
+        <article class="card alert-card risk-medium">
+          <header class="alert-head">
+            <span class="pill pill-medium">POTENTIAL MATCH · MEDIUM</span>
+            <span class="sample-tag">SAMPLE DATA</span>
+          </header>
+          <dl class="alert-body">
+            <dt>Ingredient</dt><dd>gouda cheese wedge</dd>
+            <dt>Recall product</dt><dd>Cheese variety pack (Class I, ongoing)</dd>
+            <dt>Why it matched</dt><dd>category-level signal in a broadly described recall — verify before acting</dd>
+            <dt>Next step</dt><dd>Review the recall details and check whether the affected lot is in your inventory.</dd>
+          </dl>
+        </article>
+
+        <article class="card alert-card risk-none">
+          <header class="alert-head">
+            <span class="pill pill-none">NEEDS A SPECIFIC NAME</span>
+          </header>
+          <dl class="alert-body">
+            <dt>Ingredient</dt><dd>cheese</dd>
+            <dt>Result</dt><dd>"cheese" is a single generic category term; no match was produced.</dd>
+            <dt>Try instead</dt><dd><span class="mono">sharp cheddar cheese</span>, <span class="mono">gouda cheese wedge</span></dd>
+          </dl>
+        </article>
+      </div>
+
+      <p class="fineprint">Sample data is illustrative. We don't publish match counts or accuracy percentages we can't back up with your own scan.</p>
+    </div>
+  </section>
+
+  <section class="section alt" id="why-trust">
+    <div class="wrap narrow">
+      <h2>How the matching actually works</h2>
+      <ul class="list-check">
+        <li>We compare ingredient names, product details, brands and categories — not a guess, and not a language model.</li>
+        <li>Matches come in levels: exact phrase, brand/firm match, synonym equivalent (<span class="mono">rocket</span> ↔ <em>arugula</em>), fuzzy similarity, and category-level.</li>
+        <li>Every match repeats the wording it matched on, so you can verify or dismiss it in seconds.</li>
+        <li>Weak or generic entries don't produce matches. "cheese" alone will not be matched against every cheese recall — we ask for a more specific name instead.</li>
+        <li>Nothing is presented as confirmed. A match tells you where to look, not what to conclude.</li>
+      </ul>
+      <div class="risk-legend">
+        <h3>Risk levels you'll see</h3>
+        <p><span class="pill pill-critical">CRITICAL</span> check today — a high-confidence match to an active Class I recall</p>
+        <p><span class="pill pill-high">HIGH</span> review the same day — a confident match to a Class II recall</p>
+        <p><span class="pill pill-medium">MEDIUM</span> review when you can — lower confidence or category-level signal</p>
+        <p><span class="pill pill-none">NO MATCH</span> nothing raised a signal — and it's still only a snapshot</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="benefits">
+    <div class="wrap">
+      <h2>What you get out of it</h2>
+      <div class="table-scroll">
+        <table class="benefits">
+          <caption class="visually-hidden">Features, benefits and what they change in your operation</caption>
+          <thead>
+            <tr><th scope="col">What it does</th><th scope="col">What that means</th><th scope="col">Why it matters to your operation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Ingredient-level matching</td><td>You see only the recalls that touch your list</td><td>Less time reading national lists</td></tr>
+            <tr><td>A written reason per match</td><td>You can verify or dismiss it in seconds</td><td>Fewer "what do we do with this?" threads</td></tr>
+            <tr><td>Source link + pull date</td><td>You can trace the claim back to the source</td><td>A check you can actually show</td></tr>
+            <tr><td>Risk levels</td><td>Your team knows what to review first</td><td>Attention goes where it matters</td></tr>
+            <tr><td>A dated result you can save or print</td><td>The check carries its own timestamp and sources</td><td>Something to keep with your food safety paperwork</td></tr>
+            <tr><td>Run the check again when your menu changes</td><td>The result reflects the list you actually submitted</td><td>No stale assumptions about last season's menu</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="who">
+    <div class="wrap two-col">
+      <div class="card">
+        <h3>Who it's for</h3>
+        <ul class="list-check">
+          <li>Independent restaurants and cafés that cook from ingredients</li>
+          <li>Small catering operations</li>
+          <li>Bakeries and small food businesses</li>
+          <li>Small markets and specialty food shops</li>
+          <li>Food safety consultants who need fresh evidence for several clients</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Who it's not for</h3>
+        <ul class="list-cross">
+          <li>Food manufacturers or distributors running their own recalls — you need recall execution tooling, not a menu checker</li>
+          <li>Operations outside the United States: this covers US recalls only</li>
+          <li>Anyone looking for a HACCP plan, a certification, or a compliance guarantee</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section scan-section" id="scan">
+    <div class="wrap narrow">
+      <h2>Scan your menu free</h2>
+      <p class="section-lede">Paste your ingredient list or upload a CSV. We email you the result link — that's the only reason we ask for an email.</p>
+
+      <form class="card form" id="scan-form" action="https://formspree.io/f/mppwblpg" method="POST" novalidate>
+        <div class="field">
+          <label for="ingredients">Your ingredient list</label>
+          <p class="hint" id="ingredients-hint">One ingredient per line, e.g. <span class="mono">Sharp Cheddar Cheese Slices</span></p>
+          <textarea id="ingredients" name="message" rows="8" aria-describedby="ingredients-hint items-count" placeholder="Sharp Cheddar Cheese Slices&#10;Romaine Lettuce&#10;Hummus"></textarea>
+          <p class="hint" id="items-count" aria-live="polite">0 items detected</p>
+        </div>
+
+        <div class="field">
+          <label for="csv">…or upload a CSV</label>
+          <input type="file" id="csv" name="csv" accept=".csv,.txt,text/csv,text/plain">
+          <p class="hint">Max 1 MB · up to 5,000 lines · UTF-8 · <a href="assets/csv-template.csv" download>Download the CSV template</a></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Where should we send the result?</label>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@restaurant.com" aria-describedby="email-hint">
+          <p class="hint" id="email-hint">We use it to send this result and nothing else. No sales sequence.</p>
+        </div>
+
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+
+        <button class="btn btn-primary btn-block" type="submit" id="scan-submit">Scan my menu</button>
+
+        <ul class="micro micro-center">
+          <li>No credit card</li>
+          <li>1 free scan per email per month</li>
+          <li>50 items max</li>
+          <li>We don't publish or share your list</li>
+        </ul>
+      </form>
+
+      <div id="result" class="result" aria-live="polite" hidden></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="early-access">
+    <div class="wrap narrow">
+      <h2>Want this check to run every day?</h2>
+      <p>Scanning once tells you about today. Recalls keep getting published after your scan. Daily monitoring re-runs the check and emails you when something new matches — it isn't live yet, and we won't sell you something that doesn't exist.</p>
+      <form class="card form form-inline" id="interest-form" novalidate>
+        <div class="field">
+          <label for="interest-email">Email</label>
+          <input type="email" id="interest-email" name="email" autocomplete="email" inputmode="email" placeholder="you@restaurant.com">
+        </div>
+        <button class="btn btn-secondary" type="submit" id="interest-submit">Join the early-access list</button>
+        <p class="hint">One email when monitoring opens. No sales sequence.</p>
+        <p class="form-error" id="interest-error" role="alert" hidden></p>
+        <p class="form-ok" id="interest-ok" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="questions">
+    <div class="wrap narrow">
+      <h2>Questions</h2>
+
+      <details class="faq">
+        <summary>What exactly does the scan check?</summary>
+        <p>Your ingredient list against active US food recall records from the FDA openFDA food enforcement dataset. Each result shows the recall product, the recalling firm, the class, the reason, lot information when the agency published it, why it matched, and the source link.</p>
+      </details>
+
+      <details class="faq">
+        <summary>How does the matching work?</summary>
+        <p>Deterministic rules: exact phrase, brand or firm match, synonym equivalent (rocket → arugula), fuzzy similarity, and category-level. No language model decides your matches, and every match carries the wording it matched on.</p>
+      </details>
+
+      <details class="faq">
+        <summary>How accurate is it?</summary>
+        <p>Honest answer: matching is text-based. The FDA and USDA do not publish reliable UPC/GTIN data, so a match tells you where to look, not what to conclude. Generic entries like "cheese" are flagged rather than guessed, which keeps obviously wrong matches out.</p>
+      </details>
+
+      <details class="faq">
+        <summary>What if a match is wrong?</summary>
+        <p>Treat every result as a review task. Each match shows the wording it matched on, so a weak match can be dismissed in seconds — and your record shows you looked.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Does this replace our food safety procedures or our HACCP plan?</summary>
+        <p>No. It monitors recall data against your ingredient list. Your procedures, your supplier checks and your HACCP plan stay yours, and they stay necessary.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Does it guarantee compliance?</summary>
+        <p>No. It's a monitoring and record-keeping aid — not a compliance guarantee, not a certification, and not legal advice.</p>
+      </details>
+
+      <details class="faq">
+        <summary>What data sources do you use?</summary>
+        <p>FDA openFDA food enforcement data (public domain, US government work). USDA FSIS coverage is being added; until it is, this page says so plainly instead of implying it.</p>
+      </details>
+
+      <details class="faq">
+        <summary>How often is the data checked?</summary>
+        <p>A free scan is a one-time check on the data as of that moment, and the result states the date the data was pulled. Monitoring re-checks daily — that part isn't live yet.</p>
+      </details>
+
+      <details class="faq">
+        <summary>How often are recalls updated?</summary>
+        <p>The FDA refreshes the food enforcement dataset on the agency's schedule. Our pulls are timestamped, and the timestamp is shown in your results and your emails.</p>
+      </details>
+
+      <details class="faq">
+        <summary>What about a recall that gets updated or resolved?</summary>
+        <p>Status changes are tracked. A closed recall is shown as resolved and its risk is downgraded rather than deleted, so you can see the history instead of guessing what happened to it.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Can I use this for multiple locations?</summary>
+        <p>Each scan covers one list. Monitoring plans (when they open) cover a single location, with a separate check per location. Multi-location support comes later.</p>
+      </details>
+
+      <details class="faq">
+        <summary>What file formats can I upload?</summary>
+        <p>CSV or plain text: UTF-8, up to 1 MB, up to 5,000 lines, one ingredient per line. A header row is optional, and there's a template you can download from the form.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Do I need technical knowledge?</summary>
+        <p>No. Paste a list, read a result. Everything is in plain language, and the reason for each match is written out.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Is my menu data secure, and who can see it?</summary>
+        <p>Your list is used to run your scan and, if you enable it, to monitor it. It isn't published and isn't sold or shared with third parties. We only make security statements we can stand behind — anything stronger than that isn't on this page yet.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Is this only for the US?</summary>
+        <p>Yes, at launch. The data covers US recalls only, and we'd rather say that up front than let you assume otherwise.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Do I have to pay to see a result?</summary>
+        <p>No. The scan and the result are free, and you keep the record. Paid monitoring is a separate, future thing — it's not being sold here until it works.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="wrap narrow">
+      <h2>Run the check once. Decide afterwards.</h2>
+      <p>It takes a minute, costs nothing, and you keep the result.</p>
+      <div class="cta-row cta-center">
+        <a class="btn btn-primary" href="#scan">Scan my menu free</a>
+        <a class="btn btn-ghost" href="#sample">See a sample result first</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h2 class="footer-title">Menu Risk</h2>
+      <p class="footer-note">Recall monitoring and matching for food businesses. US recalls only.</p>
+    </div>
+    <nav aria-label="Product">
+      <h3>Product</h3>
+      <ul>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#sample">Sample result</a></li>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="assets/csv-template.csv" download>CSV template</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Sources">
+      <h3>Sources &amp; data</h3>
+      <ul>
+        <li><a href="https://open.fda.gov/apis/food/enforcement/" rel="noopener nofollow" target="_blank">FDA openFDA food enforcement</a></li>
+        <li><a href="https://www.fsis.usda.gov/recalls" rel="noopener nofollow" target="_blank">USDA FSIS recalls</a> <span class="tag-soon">being added</span></li>
+        <li>Coverage: US recalls only</li>
+      </ul>
+    </nav>
+    <nav aria-label="Legal">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-legal">
+    <p><strong>Disclaimer:</strong> Menu Risk is a recall monitoring and matching tool. It is not a food safety authority, not a certification body, and not legal, regulatory or compliance advice. Results are potential matches produced by text-based comparison of your list against public US recall data. A match does not confirm that any product you hold is affected. Always verify lot codes and dates, and confirm with your supplier. We are not affiliated with the FDA, USDA or any government agency.</p>
+    <p class="footer-bottom">© <span id="year">2026</span> Menu Risk · <a href="mailto:info@ai2eo.com">info@ai2eo.com</a></p>
+  </div>
+</footer>
+
+<!-- Founder/expertise section intentionally omitted: publishing it requires real
+     name, credentials and bio link (LANDING_BLUEPRINT §15, gate G6). No placeholder
+     expertise is shown to visitors. -->
+
+<script src="config.js?v=20260930"></script>
+<script src="script.js?v=20260930"></script>
+</body>
+</html>
