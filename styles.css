@@ -248,10 +248,13 @@ li { margin-bottom: 0.45rem; }
 
 /* --- benefits table --- */
 .table-scroll { overflow-x: auto; }
-.benefits { width: 100%; border-collapse: collapse; min-width: 640px; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+.benefits { width: 100%; border-collapse: collapse; min-width: 640px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.22s ease, box-shadow 0.22s ease; }
+.benefits:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
 .benefits th, .benefits td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 0.94rem; }
 .benefits th { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-mono); color: var(--ink); background: var(--surface-strong); }
 .benefits tbody tr:last-child td { border-bottom: 0; }
+.benefits tbody tr { transition: background-color 0.18s ease; }
+.benefits tbody tr:hover { background: var(--accent-soft); }
 
 /* --- form --- */
 .scan-section { background: var(--accent-soft); border-block: 1px solid var(--line); }
